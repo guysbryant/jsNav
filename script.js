@@ -1,6 +1,10 @@
 window.onload = function(){
-    // navDiv = document.createElement('div');
-    // navUL = document.createElement()
-    // clickDiv.innerHTML = "<p>Sup</p>";
-    // document.body.appendChild(clickDiv);
+    let navUL = document.getElementById("navUL");
+    let navLIs = navUL.children;
+    for (var i = 0; i < navLIs.length; i++){
+        navLIs[i].addEventListener('click', function(){
+           let path = this.id;
+           window.open(path);
+        })
+    }
 };
